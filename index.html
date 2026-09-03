@@ -3,56 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Everyinstore</title>
+  <meta name="description" content="Everyinstore curates Korea-exclusive collectibles, character goods, K-pop items and lifestyle finds for global buyers." />
+  <title>Everyinstore | Korea Exclusive Finds</title>
   <style>
-    :root { color-scheme: light; }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f5;
-      color: #111;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: #f6f6f2;
+      color: #121212;
     }
-    .hero {
-      text-align: center;
-      padding: 48px 24px;
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(246,246,242,.88);
+      border-bottom: 1px solid rgba(18,18,18,.08);
     }
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      font-size: clamp(2.2rem, 7vw, 5rem);
-      font-weight: 800;
-      letter-spacing: -0.05em;
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -.04em; font-size: 1.25rem; }
+    .mark { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: #121212; color: white; font-size: .9rem; }
+    .navlinks { display: flex; gap: 22px; color: #5d5d5d; font-size: .94rem; }
+    .hero { padding: 96px 0 78px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 54px; align-items: center; }
+    .eyebrow { display: inline-flex; padding: 8px 12px; border: 1px solid #deded8; border-radius: 999px; background: white; font-size: .82rem; font-weight: 700; }
+    h1 { margin: 20px 0 20px; font-size: clamp(3rem, 8vw, 6.8rem); line-height: .92; letter-spacing: -.075em; }
+    .lead { max-width: 650px; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.65; color: #666; }
+    .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { padding: 14px 18px; border-radius: 14px; font-weight: 800; border: 1px solid #161616; }
+    .btn.primary { background: #161616; color: white; }
+    .btn.secondary { background: transparent; }
+    .visual { min-height: 420px; border-radius: 32px; background: linear-gradient(145deg,#171717,#343434); color: white; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 28px 70px rgba(0,0,0,.16); }
+    .visual small { color: #bdbdbd; text-transform: uppercase; letter-spacing: .14em; }
+    .visual .big { font-size: clamp(2.4rem,5vw,4.5rem); font-weight: 900; letter-spacing: -.07em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 8px 11px; font-size: .82rem; color: #dedede; }
+    section { padding: 74px 0; }
+    .section-head { margin-bottom: 30px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,3.4rem); letter-spacing: -.055em; }
+    .section-head p { margin: 0; color: #707070; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .card { background: white; border: 1px solid #e6e6df; border-radius: 22px; padding: 24px; min-height: 210px; }
+    .card .icon { font-size: 1.55rem; }
+    .card h3 { margin: 36px 0 9px; font-size: 1.18rem; }
+    .card p { margin: 0; color: #707070; line-height: 1.55; font-size: .94rem; }
+    .promise { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; background: #151515; color: white; padding: 34px; border-radius: 28px; }
+    .promise h2 { margin: 0; font-size: clamp(2rem,4vw,3.5rem); letter-spacing: -.055em; }
+    .promise ul { margin: 0; padding-left: 20px; color: #d6d6d6; line-height: 1.9; }
+    footer { padding: 42px 0 58px; color: #777; font-size: .9rem; }
+    @media (max-width: 860px) {
+      .navlinks { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 62px; }
+      .visual { min-height: 330px; }
+      .grid { grid-template-columns: repeat(2,1fr); }
+      .promise { grid-template-columns: 1fr; }
     }
-    .logo-mark {
-      width: 0.95em;
-      height: 0.95em;
-      border-radius: 22%;
-      display: grid;
-      place-items: center;
-      background: #111;
-      color: white;
-      font-size: 0.45em;
-      letter-spacing: 0;
-    }
-    .tagline {
-      margin-top: 16px;
-      font-size: 1rem;
-      color: #666;
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 26px, 1120px); }
+      .grid { grid-template-columns: 1fr; }
+      .hero { gap: 34px; }
+      h1 { font-size: clamp(3.2rem,18vw,5rem); }
+      .actions { flex-direction: column; }
+      .btn { text-align: center; }
     }
   </style>
 </head>
 <body>
-  <main class="hero">
-    <div class="logo" aria-label="Everyinstore logo">
-      <span class="logo-mark">E</span>
-      <span>Everyinstore</span>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top" aria-label="Everyinstore home">
+          <span class="mark">E</span><span>Everyinstore</span>
+        </a>
+        <div class="navlinks">
+          <a href="#categories">Categories</a>
+          <a href="#promise">Our Promise</a>
+        </div>
+      </nav>
     </div>
-    <p class="tagline">Korea-sourced finds, curated for the world.</p>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Korea → Worldwide</span>
+        <h1>Korea-only finds, curated for the world.</h1>
+        <p class="lead">Everyinstore discovers collectible cards, character goods, K-pop merchandise, Starbucks Korea items and limited local releases — sourced directly in Korea for global buyers.</p>
+        <div class="actions">
+          <a class="btn primary" href="#categories">Explore categories</a>
+          <a class="btn secondary" href="#promise">Why Everyinstore</a>
+        </div>
+      </div>
+      <div class="visual" aria-label="Everyinstore featured categories">
+        <small>Everyinstore selection</small>
+        <div class="big">Rare in your country.<br>Found in Korea.</div>
+        <div class="tags">
+          <span class="tag">Pokémon</span>
+          <span class="tag">K-pop</span>
+          <span class="tag">Starbucks Korea</span>
+          <span class="tag">Character Goods</span>
+          <span class="tag">Limited Editions</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="categories">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What we source</h2>
+          <p>Focused on compact, collectible and Korea-exclusive products with strong international appeal.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="icon">🃏</div><h3>Collectible Cards</h3><p>Pokémon promos, Korean releases and event-only collectible cards.</p></article>
+          <article class="card"><div class="icon">🎤</div><h3>K-pop Goods</h3><p>Photocards, collaborations, pop-up items and artist merchandise.</p></article>
+          <article class="card"><div class="icon">☕</div><h3>Korea Exclusives</h3><p>Starbucks Korea, regional products, tourism editions and local collaborations.</p></article>
+          <article class="card"><div class="icon">✨</div><h3>Limited Finds</h3><p>Short-run releases, event exclusives and products difficult to source overseas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="promise">
+      <div class="wrap">
+        <div class="promise">
+          <h2>Sourced in Korea.<br>Selected with purpose.</h2>
+          <ul>
+            <li>Direct Korea-based sourcing</li>
+            <li>Priority on exclusive and limited releases</li>
+            <li>Clear product condition and careful packaging</li>
+            <li>Built for collectors and overseas buyers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">© 2026 Everyinstore. Korea-sourced finds for global collectors.</div>
+  </footer>
 </body>
 </html>
