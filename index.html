@@ -3,145 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Everyinstore curates Korea-exclusive collectibles, character goods, K-pop items and lifestyle finds for global buyers." />
-  <title>Everyinstore | Korea Exclusive Finds</title>
+  <meta name="description" content="Everyinstore — Korea-exclusive collectibles, K-pop goods, Starbucks Korea items, character goods and limited local releases for global collectors." />
+  <title>Everyinstore | Korea Exclusive Store</title>
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: #f6f6f2;
-      color: #121212;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(246,246,242,.88);
-      border-bottom: 1px solid rgba(18,18,18,.08);
-    }
-    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -.04em; font-size: 1.25rem; }
-    .mark { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: #121212; color: white; font-size: .9rem; }
-    .navlinks { display: flex; gap: 22px; color: #5d5d5d; font-size: .94rem; }
-    .hero { padding: 96px 0 78px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 54px; align-items: center; }
-    .eyebrow { display: inline-flex; padding: 8px 12px; border: 1px solid #deded8; border-radius: 999px; background: white; font-size: .82rem; font-weight: 700; }
-    h1 { margin: 20px 0 20px; font-size: clamp(3rem, 8vw, 6.8rem); line-height: .92; letter-spacing: -.075em; }
-    .lead { max-width: 650px; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.65; color: #666; }
-    .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn { padding: 14px 18px; border-radius: 14px; font-weight: 800; border: 1px solid #161616; }
-    .btn.primary { background: #161616; color: white; }
-    .btn.secondary { background: transparent; }
-    .visual { min-height: 420px; border-radius: 32px; background: linear-gradient(145deg,#171717,#343434); color: white; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 28px 70px rgba(0,0,0,.16); }
-    .visual small { color: #bdbdbd; text-transform: uppercase; letter-spacing: .14em; }
-    .visual .big { font-size: clamp(2.4rem,5vw,4.5rem); font-weight: 900; letter-spacing: -.07em; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 8px 11px; font-size: .82rem; color: #dedede; }
-    section { padding: 74px 0; }
-    .section-head { margin-bottom: 30px; }
-    .section-head h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,3.4rem); letter-spacing: -.055em; }
-    .section-head p { margin: 0; color: #707070; line-height: 1.6; }
-    .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-    .card { background: white; border: 1px solid #e6e6df; border-radius: 22px; padding: 24px; min-height: 210px; }
-    .card .icon { font-size: 1.55rem; }
-    .card h3 { margin: 36px 0 9px; font-size: 1.18rem; }
-    .card p { margin: 0; color: #707070; line-height: 1.55; font-size: .94rem; }
-    .promise { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; background: #151515; color: white; padding: 34px; border-radius: 28px; }
-    .promise h2 { margin: 0; font-size: clamp(2rem,4vw,3.5rem); letter-spacing: -.055em; }
-    .promise ul { margin: 0; padding-left: 20px; color: #d6d6d6; line-height: 1.9; }
-    footer { padding: 42px 0 58px; color: #777; font-size: .9rem; }
-    @media (max-width: 860px) {
-      .navlinks { display: none; }
-      .hero { grid-template-columns: 1fr; padding-top: 62px; }
-      .visual { min-height: 330px; }
-      .grid { grid-template-columns: repeat(2,1fr); }
-      .promise { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 26px, 1120px); }
-      .grid { grid-template-columns: 1fr; }
-      .hero { gap: 34px; }
-      h1 { font-size: clamp(3.2rem,18vw,5rem); }
-      .actions { flex-direction: column; }
-      .btn { text-align: center; }
-    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#f7f7f3;color:#111}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.topbar{background:#111;color:#fff;text-align:center;padding:9px 12px;font-size:.82rem;letter-spacing:.02em}header{position:sticky;top:0;z-index:30;background:rgba(247,247,243,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e7e7df}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.3rem;letter-spacing:-.04em}.mark{width:36px;height:36px;background:#111;color:#fff;border-radius:11px;display:grid;place-items:center;font-weight:900}.navlinks{display:flex;gap:22px;font-size:.92rem;color:#5f5f5f}.shopbtn{background:#111;color:#fff;padding:11px 15px;border-radius:12px;font-weight:800;font-size:.9rem}.hero{padding:56px 0 34px}.hero-card{min-height:520px;border-radius:30px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;background:linear-gradient(135deg,#141414,#2d2d2d);color:#fff;overflow:hidden}.eyebrow{display:inline-flex;padding:8px 12px;border:1px solid #494949;border-radius:999px;font-size:.82rem;color:#d7d7d7}.hero h1{font-size:clamp(3.1rem,7vw,6.4rem);line-height:.92;letter-spacing:-.07em;margin:22px 0}.hero p{max-width:620px;color:#c9c9c9;line-height:1.65;font-size:1.06rem}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;padding:14px 18px;border-radius:13px;font-weight:850}.btn.light{background:#fff;color:#111}.btn.ghost{border:1px solid #535353;color:#fff}.hero-showcase{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:center}.mini{min-height:180px;border-radius:22px;padding:20px;background:#fff;color:#111;display:flex;flex-direction:column;justify-content:space-between}.mini.dark{background:#222;color:#fff;border:1px solid #3a3a3a}.mini .emoji{font-size:2rem}.mini strong{font-size:1.15rem}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:28px 0 10px}.trust div{background:#fff;border:1px solid #e6e6df;border-radius:16px;padding:16px;text-align:center;font-size:.9rem}.section{padding:62px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{margin:0;font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.055em}.section-head p{margin:0;color:#777;max-width:520px;line-height:1.6}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{background:#fff;border:1px solid #e4e4dc;border-radius:22px;padding:24px;min-height:190px}.cat .icon{font-size:1.8rem}.cat h3{margin:42px 0 7px}.cat p{margin:0;color:#747474;line-height:1.55;font-size:.92rem}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:#fff;border:1px solid #e4e4dc;border-radius:22px;overflow:hidden}.product-art{aspect-ratio:4/3;display:grid;place-items:center;font-size:4rem;background:linear-gradient(135deg,#efefe9,#deded5)}.product-body{padding:20px}.badge{display:inline-flex;background:#111;color:white;border-radius:999px;padding:6px 9px;font-size:.72rem;font-weight:800;margin-bottom:10px}.product h3{font-size:1.08rem;margin:0 0 8px;line-height:1.35}.product p{margin:0;color:#777;font-size:.9rem;line-height:1.5;min-height:54px}.product-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:10px}.price{font-weight:900}.status{font-size:.8rem;color:#666;border:1px solid #ddd;padding:7px 9px;border-radius:10px}.banner{background:#ffe45e;border-radius:28px;padding:34px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.banner h2{margin:0;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.055em}.banner p{margin:10px 0 0;color:#544b00;line-height:1.6}.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.promise article{background:#111;color:#fff;border-radius:22px;padding:25px}.promise p{color:#c4c4c4;line-height:1.55}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:26px;padding:54px 0}.footer-grid p,.footer-grid a{color:#777;line-height:1.8;font-size:.9rem}.footer-title{font-weight:900;margin-bottom:8px}.copyright{border-top:1px solid #e1e1da;padding:20px 0 38px;color:#888;font-size:.85rem}@media(max-width:900px){.navlinks{display:none}.hero-card{grid-template-columns:1fr;padding:34px}.hero-showcase{grid-template-columns:1fr 1fr}.trust{grid-template-columns:1fr 1fr}.categories{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.banner{grid-template-columns:1fr}.promise{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.wrap{width:min(100% - 24px,1180px)}.shopbtn{display:none}.hero{padding-top:22px}.hero-card{padding:24px;min-height:auto}.hero h1{font-size:clamp(3rem,16vw,4.8rem)}.hero-showcase,.categories,.products,.trust{grid-template-columns:1fr}.mini{min-height:150px}.section{padding:46px 0}.section-head{display:block}.section-head p{margin-top:10px}.footer-grid{grid-template-columns:1fr}.banner{padding:25px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <nav>
-        <a class="brand" href="#top" aria-label="Everyinstore home">
-          <span class="mark">E</span><span>Everyinstore</span>
-        </a>
-        <div class="navlinks">
-          <a href="#categories">Categories</a>
-          <a href="#promise">Our Promise</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <div class="topbar">Korea-sourced collectibles & limited goods · Worldwide shipping-ready store concept</div>
+  <header><div class="wrap"><nav>
+    <a class="brand" href="#top"><span class="mark">E</span><span>Everyinstore</span></a>
+    <div class="navlinks"><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">Why us</a></div>
+    <a class="shopbtn" href="#shop">Browse drops</a>
+  </nav></div></header>
 
   <main id="top">
-    <div class="wrap hero">
+    <section class="hero"><div class="wrap"><div class="hero-card">
       <div>
-        <span class="eyebrow">Korea → Worldwide</span>
-        <h1>Korea-only finds, curated for the world.</h1>
-        <p class="lead">Everyinstore discovers collectible cards, character goods, K-pop merchandise, Starbucks Korea items and limited local releases — sourced directly in Korea for global buyers.</p>
-        <div class="actions">
-          <a class="btn primary" href="#categories">Explore categories</a>
-          <a class="btn secondary" href="#promise">Why Everyinstore</a>
-        </div>
+        <span class="eyebrow">KOREA → WORLDWIDE</span>
+        <h1>Hard to find abroad.<br>Easy to find here.</h1>
+        <p>Everyinstore curates Korea-exclusive collectibles, K-pop merchandise, Starbucks Korea items, character goods and event-only releases for collectors around the world.</p>
+        <div class="hero-actions"><a class="btn light" href="#shop">Shop featured</a><a class="btn ghost" href="#categories">Explore categories</a></div>
       </div>
-      <div class="visual" aria-label="Everyinstore featured categories">
-        <small>Everyinstore selection</small>
-        <div class="big">Rare in your country.<br>Found in Korea.</div>
-        <div class="tags">
-          <span class="tag">Pokémon</span>
-          <span class="tag">K-pop</span>
-          <span class="tag">Starbucks Korea</span>
-          <span class="tag">Character Goods</span>
-          <span class="tag">Limited Editions</span>
-        </div>
+      <div class="hero-showcase">
+        <div class="mini"><span class="emoji">🃏</span><div><small>COLLECTIBLES</small><br><strong>Pokémon Korea</strong></div></div>
+        <div class="mini dark"><span class="emoji">🎤</span><div><small>K-POP</small><br><strong>Photocards & Drops</strong></div></div>
+        <div class="mini dark"><span class="emoji">☕</span><div><small>KOREA EXCLUSIVE</small><br><strong>Starbucks Goods</strong></div></div>
+        <div class="mini"><span class="emoji">✨</span><div><small>LIMITED</small><br><strong>Local & Event Finds</strong></div></div>
       </div>
     </div>
+    <div class="trust"><div>🇰🇷 Sourced in Korea</div><div>📦 Collector-friendly packing</div><div>🌍 Built for global buyers</div><div>🔎 Limited-release focused</div></div>
+    </div></section>
 
-    <section id="categories">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>What we source</h2>
-          <p>Focused on compact, collectible and Korea-exclusive products with strong international appeal.</p>
-        </div>
-        <div class="grid">
-          <article class="card"><div class="icon">🃏</div><h3>Collectible Cards</h3><p>Pokémon promos, Korean releases and event-only collectible cards.</p></article>
-          <article class="card"><div class="icon">🎤</div><h3>K-pop Goods</h3><p>Photocards, collaborations, pop-up items and artist merchandise.</p></article>
-          <article class="card"><div class="icon">☕</div><h3>Korea Exclusives</h3><p>Starbucks Korea, regional products, tourism editions and local collaborations.</p></article>
-          <article class="card"><div class="icon">✨</div><h3>Limited Finds</h3><p>Short-run releases, event exclusives and products difficult to source overseas.</p></article>
-        </div>
+    <section class="section" id="categories"><div class="wrap">
+      <div class="section-head"><div><h2>Shop by category</h2></div><p>Based on the products we actually source and monitor in Korea.</p></div>
+      <div class="categories">
+        <article class="cat"><div class="icon">🃏</div><h3>Pokémon Korea</h3><p>Promo cards, Korean-exclusive releases, event packs and collectible accessories.</p></article>
+        <article class="cat"><div class="icon">🎤</div><h3>K-pop & Photocards</h3><p>Artist photocards, café collaborations, pop-up goods and fan event exclusives.</p></article>
+        <article class="cat"><div class="icon">☕</div><h3>Starbucks Korea</h3><p>Bearista keyrings, Korean heritage designs, pins and seasonal local drops.</p></article>
+        <article class="cat"><div class="icon">🇰🇷</div><h3>Korea-only Finds</h3><p>Daiso, local character goods, regional releases, travel cards and collaboration items.</p></article>
       </div>
-    </section>
+    </div></section>
 
-    <section id="promise">
-      <div class="wrap">
-        <div class="promise">
-          <h2>Sourced in Korea.<br>Selected with purpose.</h2>
-          <ul>
-            <li>Direct Korea-based sourcing</li>
-            <li>Priority on exclusive and limited releases</li>
-            <li>Clear product condition and careful packaging</li>
-            <li>Built for collectors and overseas buyers</li>
-          </ul>
-        </div>
+    <section class="section" id="shop"><div class="wrap">
+      <div class="section-head"><div><h2>Featured finds</h2></div><p>A storefront-style preview using items from our current sourcing list. Checkout links can be connected later.</p></div>
+      <div class="products">
+        <article class="product"><div class="product-art">🐟</div><div class="product-body"><span class="badge">KOREA EXCLUSIVE</span><h3>Pokémon Magikarp Promo Pack 040/M-P</h3><p>MEGA FESTA 2026 Korean promo pack. Collector-focused listing concept.</p><div class="product-foot"><span class="price">Featured</span><span class="status">In sourcing</span></div></div></article>
+        <article class="product"><div class="product-art">🐻</div><div class="product-body"><span class="badge">STARBUCKS KOREA</span><h3>Bearista Miniature Keyring</h3><p>Green / Pink Korea-market Bearista keyring from the current inventory line.</p><div class="product-foot"><span class="price">Limited</span><span class="status">Stock item</span></div></div></article>
+        <article class="product"><div class="product-art">🖼️</div><div class="product-body"><span class="badge">KOREAN DESIGN</span><h3>Starbucks Hojakdo Enamel Pin</h3><p>Korean heritage-inspired Starbucks Korea collectible pin item.</p><div class="product-foot"><span class="price">Collector pick</span><span class="status">Stock item</span></div></div></article>
+        <article class="product"><div class="product-art">💳</div><div class="product-body"><span class="badge">KOREA LOCAL</span><h3>Pokémon EZL Transit Card</h3><p>Korean transportation card collectible featuring Pokémon character artwork.</p><div class="product-foot"><span class="price">Local find</span><span class="status">Limited stock</span></div></div></article>
+        <article class="product"><div class="product-art">📸</div><div class="product-body"><span class="badge">K-POP DROP</span><h3>RESCENE Photocard Selection</h3><p>Collaboration and event photocards, including café and promotional sourcing targets.</p><div class="product-foot"><span class="price">New drop</span><span class="status">Monitoring</span></div></div></article>
+        <article class="product"><div class="product-art">🐰</div><div class="product-body"><span class="badge">CHARACTER GOODS</span><h3>Miffy Korea Regional Goods</h3><p>Seongsu and regional character merchandise sourced from Korean retail locations.</p><div class="product-foot"><span class="price">Korea only</span><span class="status">Selected items</span></div></div></article>
       </div>
-    </section>
+    </div></section>
+
+    <section class="section"><div class="wrap"><div class="banner"><div><h2>Not just products.<br>We hunt the hard-to-find stuff.</h2><p>Pop-up exclusives, city-limited goods, event benefits, café photocards, local character drops and products international buyers usually cannot source easily.</p></div><div><strong>Everyinstore sourcing focus</strong><p>Pokémon · K-pop · Starbucks Korea · Character Goods · Korean Local Exclusives · Event Limited Releases</p></div></div></div></section>
+
+    <section class="section" id="about"><div class="wrap">
+      <div class="section-head"><div><h2>Why Everyinstore</h2></div><p>Designed to feel like a specialist Korea-based collectible store, not a generic marketplace seller.</p></div>
+      <div class="promise"><article><h3>Direct Korea sourcing</h3><p>Products are selected from Korean retail, events, pop-ups and local releases.</p></article><article><h3>Collector mindset</h3><p>Condition clarity, protective packing and compact collectible goods are prioritized.</p></article><article><h3>Global-first selection</h3><p>We focus on items that are harder to obtain outside Korea and have international fandom demand.</p></article></div>
+    </div></section>
   </main>
 
-  <footer>
-    <div class="wrap">© 2026 Everyinstore. Korea-sourced finds for global collectors.</div>
-  </footer>
+  <footer><div class="wrap"><div class="footer-grid"><div><div class="footer-title">Everyinstore</div><p>Korea-exclusive finds curated for global collectors.</p></div><div><div class="footer-title">Shop</div><p><a href="#shop">Featured</a><br><a href="#categories">Categories</a></p></div><div><div class="footer-title">Focus</div><p>Pokémon<br>K-pop<br>Starbucks Korea<br>Limited Goods</p></div></div><div class="copyright">© 2026 Everyinstore. Storefront concept — checkout integration coming next.</div></div></footer>
 </body>
 </html>
